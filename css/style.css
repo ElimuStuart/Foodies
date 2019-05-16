@@ -87,6 +87,7 @@ a {
 
 .between-sec {
     padding: 20rem 0;
+    text-align: center;
 }
 
 .between-sec-color {
@@ -160,6 +161,15 @@ header {
 }
 
 /* Header - Nav */
+#logo {
+    display: none;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: -5px;
+    border-bottom: 1px solid var(--main-white);
+}
+
 .nav {
     width: 100%;
     height: 6rem;
@@ -368,4 +378,133 @@ footer h4 {
     font-weight: 100;
     font-family: 'Teko', sans-serif;
 
+}
+
+@media screen and (min-width: 769px){
+    header,
+    .between-sec {
+        background-attachment: fixed;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #logo {
+        display: block;
+    }
+
+    .nav {
+        display: flex;
+        padding: 2rem 10rem 0;
+        justify-content: space-between;
+    }
+
+    .nav .overlay {
+        background: none;
+        opacity: initial;
+        position: initial;
+        transform: initial;
+    }
+
+    .nav .overlay ul {
+        flex-direction: row;
+        margin-top: 2px;
+        list-style: none;
+    }
+
+    .nav .overlay ul li {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        margin-right: -1px;
+        padding: 0 2rem;
+    }
+
+    .main-text {
+        margin: 18rem auto auto;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .center {
+        flex: 1;
+    }
+
+    .add-flex {
+        flex: 1;
+    }
+
+    .add-padding-right {
+        padding-right: 10rem;
+    }
+    
+    .first {
+        order: 1;
+    }
+
+    .second {
+        order: 2;
+    }
+
+    .store {
+        min-height: 40rem;
+    }
+
+    .btn-info {
+        font-size: 1.8rem;
+    }
+
+    .main-text h1 {
+        transform: translateY(4rem);
+        opacity: 0;
+        animation: .5s fadeUp .5s forwards;
+
+    }
+
+    .main-text h2 {
+        transform: scale(2);
+        opacity: 0;
+        animation: fadeIn .5s forwards;
+    }
+
+    .main-text .main-btn {
+        opacity: 0;
+        animation: .5s fade 1s forwards;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            transform: scale(2);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeUp {
+        0% {
+            transform: translateY(4rem);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
 }
