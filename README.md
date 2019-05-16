@@ -1,7 +1,7 @@
 # Foodies
 HTML Template for Foodies restaurant
 
-##Requirements
+## Requirements
 HTML5
 CSS3
 JavaScript
